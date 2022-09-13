@@ -1,1 +1,16 @@
-
+.header {
+    background-color: #F55A5A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 13px 0 13px 0;
+}
+.title {
+    color: #ffff;
+    font-weight: 500;
+    margin: 0;
+}
+.hero {
+    padding: 50px 50px 0 50px;
+}
