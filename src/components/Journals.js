@@ -1,20 +1,23 @@
 import React, { Component } from "react";
-import { Card } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { GoLocation } from "react-icons/go";
 import "../App.css"
 
 class Journals extends Component{
     render(){
         return(
-            <div className="journal">
-                <Card className="card" style={{flexDirection: "row", border: "none"}}>
-                    <Card.Img className="card-img" variant="top" src={this.props.journal.imageUrl} style={{width: "30rem"}} />
-                    <Card.Body>
-                        <p>{this.props.journal.title}</p>
-                        <p>{this.props.journal.location}</p>
+            <div className="container">
+                <div className="container Card">
+                    <div className="text-center image">
+                        <img src={this.props.journal.imageUrl} alt=""/>
+                    </div>
+                    <div className="Image-content">
+                        <p className="locations"><GoLocation color="red"/> <span className="location">{this.props.journal.location}</span> <a className="mapLink" href="{this.props.journal.googleMapsUrl}" _blank>View on the google Maps</a></p>
+                        <h1 className="cardTitle">{this.props.journal.title}</h1>
+                        <p className="date">{this.props.journal.startDate} - {this.props.journal.endDate}</p>
                         <p>{this.props.journal.description}</p>
-                    </Card.Body>
-                </Card>
+                    </div>
+                </div>
                 <hr />
             </div>
         );

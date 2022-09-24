@@ -12,5 +12,45 @@
     margin: 0;
 }
 .hero {
-    padding: 50px 50px 0 50px;
+    margin-top: 50px;
+}
+.Card {
+    display: flex;
+    margin-bottom: 25px;
+}
+.image {
+    margin-right: 25px;
+}
+.image > img {
+    height: 336px;
+    width: 250px;
+    border-radius: 10px;
+}
+.location {
+    letter-spacing: 0.17em;
+    padding-right: 5px;
+}
+.mapLink {
+    color: #918E9B;
+}
+.cardTitle {
+    font-weight: 700;
+    line-height: 30px;
+    font-style: normal;
+    margin-bottom: 40px;
+}
+.date {
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 550px){
+    .Card{
+        display: grid;
+    }
+    .image {
+        margin: 0;
+    }
+    .locations {
+        text-align: center;
+    }
 }
